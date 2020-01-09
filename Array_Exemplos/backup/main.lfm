@@ -1,0 +1,62 @@
+object Form1: TForm1
+  Left = 355
+  Height = 240
+  Top = 148
+  Width = 320
+  Caption = 'Exemplos com Arrays'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  LCLVersion = '1.8.2.0'
+  object Edit1: TEdit
+    Left = 16
+    Height = 27
+    Top = 24
+    Width = 80
+    NumbersOnly = True
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 224
+    Height = 25
+    Top = 24
+    Width = 75
+    Caption = 'Action'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 224
+    Height = 25
+    Top = 64
+    Width = 75
+    Caption = 'Action'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Edit2: TEdit
+    Left = 16
+    Height = 27
+    Top = 104
+    Width = 80
+    TabOrder = 3
+    Text = 'Nome'
+  end
+  object Edit3: TEdit
+    Left = 16
+    Height = 27
+    Top = 136
+    Width = 80
+    TabOrder = 4
+    Text = 'Idade'
+  end
+  object ToggleBox1: TToggleBox
+    Left = 224
+    Height = 25
+    Top = 104
+    Width = 75
+    Caption = 'Action'
+    OnChange = ToggleBox1Change
+    TabOrder = 5
+  end
+end

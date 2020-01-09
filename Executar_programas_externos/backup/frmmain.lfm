@@ -1,0 +1,37 @@
+object Form1: TForm1
+  Left = 355
+  Height = 391
+  Top = 148
+  Width = 588
+  Caption = 'Exemplos de uso de chamadas externas no Shell'
+  ClientHeight = 391
+  ClientWidth = 588
+  LCLVersion = '1.8.2.0'
+  object Button1: TButton
+    Left = 48
+    Height = 25
+    Top = 24
+    Width = 475
+    Caption = 'Executar com o TProcess'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 48
+    Height = 25
+    Top = 64
+    Width = 475
+    Caption = 'Ler a saída de um programa externo com TProcess'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 48
+    Height = 25
+    Top = 104
+    Width = 475
+    Caption = 'Executando com o TProcess exemplo 2'
+    OnClick = Button3Click
+    TabOrder = 2
+  end
+end

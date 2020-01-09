@@ -1,0 +1,64 @@
+object frmExemplo: TfrmExemplo
+  Left = 619
+  Height = 241
+  Top = 217
+  Width = 322
+  Caption = 'Teste'
+  ClientHeight = 241
+  ClientWidth = 322
+  Position = poScreenCenter
+  LCLVersion = '1.8.2.0'
+  object Calcular: TButton
+    Left = 192
+    Height = 25
+    Top = 195
+    Width = 75
+    Caption = 'Pessoa'
+    OnClick = CalcularClick
+    TabOrder = 0
+  end
+  object EdtNome: TEdit
+    Left = 48
+    Height = 27
+    Top = 56
+    Width = 224
+    TabOrder = 1
+    TextHint = 'Informe o Nome'
+  end
+  object edtIdade: TEdit
+    Left = 48
+    Height = 27
+    Top = 104
+    Width = 121
+    NumbersOnly = True
+    TabOrder = 2
+    TextHint = 'Informe a Idade'
+  end
+  object edtCodigo: TEdit
+    Left = 48
+    Height = 27
+    Top = 15
+    Width = 121
+    NumbersOnly = True
+    TabOrder = 3
+    TextHint = 'Informe o Código'
+  end
+  object edtIdadeSerSomada: TEdit
+    Left = 48
+    Height = 27
+    Top = 144
+    Width = 121
+    NumbersOnly = True
+    TabOrder = 4
+    TextHint = 'Idade a ser Somada'
+  end
+  object edtResultado: TEdit
+    Left = 48
+    Height = 27
+    Top = 195
+    Width = 121
+    NumbersOnly = True
+    TabOrder = 5
+    TextHint = 'RESULTADO'
+  end
+end

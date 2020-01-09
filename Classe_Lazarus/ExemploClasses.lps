@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="ExemploClasses.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="21"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="uexemplo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmExemplo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uExemplo"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="34"/>
+        <CursorPos Y="44"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="cpessoa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="cPessoa"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="41" Y="32"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="5" HistoryIndex="4">
+      <Position1>
+        <Filename Value="uexemplo.pas"/>
+        <Caret Line="14" Column="75"/>
+      </Position1>
+      <Position2>
+        <Filename Value="uexemplo.pas"/>
+        <Caret Line="23" Column="75"/>
+      </Position2>
+      <Position3>
+        <Filename Value="uexemplo.pas"/>
+        <Caret Line="24" Column="75"/>
+      </Position3>
+      <Position4>
+        <Filename Value="uexemplo.pas"/>
+        <Caret Line="49" Column="46" TopLine="35"/>
+      </Position4>
+      <Position5>
+        <Filename Value="uexemplo.pas"/>
+        <Caret Line="42" Column="41" TopLine="35"/>
+      </Position5>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
