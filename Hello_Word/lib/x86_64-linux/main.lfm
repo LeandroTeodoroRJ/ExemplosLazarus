@@ -1,0 +1,21 @@
+object Form1: TForm1
+  Left = 474
+  Height = 175
+  Top = 253
+  Width = 473
+  Caption = 'Form1'
+  ClientHeight = 175
+  ClientWidth = 473
+  LCLVersion = '1.8.2.0'
+  object Label1: TLabel
+    Left = 88
+    Height = 63
+    Top = 45
+    Width = 309
+    Caption = 'Hello Word!'
+    Font.Height = -53
+    Font.Name = 'Sans'
+    ParentColor = False
+    ParentFont = False
+  end
+end

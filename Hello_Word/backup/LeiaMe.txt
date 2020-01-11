@@ -1,0 +1,13 @@
+********************************************************************
+      CONSIDERAÇÕES INICIAIS SOBRE A IDE LAZARUS FREE PASCAL
+********************************************************************
+
+1. E baseada no compilador free pascal que é ligeiramente diferente
+   a do Delphi
+
+2. Run -> Compile (Só compila mas não roda).
+
+3. O executável é gravado na mesma pasta do projeto.
+
+4. No ícone do monitor(desktops) é possível alterar a disposição das
+   janelas

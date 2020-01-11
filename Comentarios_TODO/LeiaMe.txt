@@ -1,0 +1,8 @@
+********************************************************
+                   COMENTÁRIOS TO DO
+********************************************************
+Os comentários "to do" (TODO), apresentam ou indicam partes
+do código que devem ser alteradas por algum motivo.
+
+A lista desses comentários pode ser vista em:
+    View -> ToDo List
