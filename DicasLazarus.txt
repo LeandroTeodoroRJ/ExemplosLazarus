@@ -1,0 +1,18 @@
+****************************************************************
+                      DICAS LAZARUS IDE
+****************************************************************
+
+TECLAS DE ATALHO
+Ctl+Tecla espaço - Ativa a lista de auto completar do objeto 
+                   (métodos e propriedades) - CodeTools commands
+                   -> Identifier completion
+
+Ctl+Shift+C - Cria uma funcion ou uma procedure no código
+	Ex: Declarar uma function ou uma procedure em private ou public
+	e na mesma linha usar o atalho. Será criado o código no final
+    do arquivo.
+         private
+         function somar(A:integer; B:integer):integer; ( Crtl+Shift+C)             
+
+As teclas de atalho podem ser alteradas em Tools -> Option 
+-> Editor -> Key Mappings
