@@ -1,7 +1,152 @@
 ****************************************************************
-                      DICAS LAZARUS IDE
+                 DICAS LAZARUS IDE - FREE PASCAL
 ****************************************************************
 
+******************** ESTRUTURA DO ARQUIVO **********************
+ARQUIVO .pas
+unit <nome da Unit>;  -> Mesmo nome do arquivo da unit quando foi salvo
+
+{$mode objfpc}{$H+} -> Diretiva de compilação inserida altomaticamente pela IDE
+
+interface  -> Início da seção interface
+
+uses	
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs;
+    ->Faz referência a classes e(ou) bibliotecas que são necessárias para 
+      a compilação dessa Unit
+
+type
+  TForm1 = class(TForm) -> Abaixo estarão os objetos e métodos que estão dentro
+                           do container Form1
+
+  private -> O que será declarado dentro da cláusula private só estará disponível
+             para essa Unit
+
+  public -> O que será declarado dentro da cláusula public estará disponível 
+            para as outras Units
+
+  end;
+
+var
+  Form1: TForm1;
+	-> Variáveis é objetos de escopo global do formulário 
+
+implementation  -> Início da seção de implementação
+
+uses
+	unitAuxilitar;  -> Faz referência a formulários e biblioteclas externas que
+                       serão utilizadas para a implementação do formulário. 
+                       Também utilizado para evitar o erro de circurar referance.
+
+{$R *.lfm} -> Diretiva de configuração inserida altomaticamente pela IDE
+
+end.
+
+****************************************************************
+
+************************* OPERADORES ***************************
+COMPARAÇÃO
+>	maior que
+<	menor que
+>=	maior igual
+<=	menor igual
+=	igualdade (comparação)
+<>	diferente de 
+
+ATITMÉTICOS
++	soma
+-	subtração
+*	multiplicação
+/	divisão
+div	divisão por inteiro
+mod	reotorna o resto da divisão
+
+LÓGICOS
+AND	lógica "e"
+OR	lógica "ou"
+NOT	lógica "não" operador de inversão
+XOR	ou exclusivo
+
+OPERADORES DE ATRIBUIÇÃO
+:=	atribui um valor a uma variável
+
+****************************************************************
+
+************************* STATEMENTS ***************************
+CONDITION STATEMENTS
+
+IF
+if-statement = `if' Boolean-expression `then' statement [ else-part ] .
+Exemplos:
+if x < 1 .5 then z := x + y else z := 1 .5
+
+if (condição) then
+  begin
+	A:=3;
+	B:=5;
+  end
+else
+  begin
+	A:=1;
+	B:=7;
+end;
+
+CASE
+case-statement = `case'  expression `of' case-list-element
+{ `;' case-list-element } [ `;' ] `end' .
+case-list-element = case-constant-list ` :' statement .
+Exemplos:
+case combobox1.ItemIndex of 
+  0 :
+     begin 
+       Label1.caption := 'OPÇÃO1'; 
+       Label2.caption := 'OPÇÃO2'; 
+     end; 
+  1 : 
+    begin 
+      Label1.caption := 'TESTE1'; 
+      Label2.caption := 'TESTE2' 
+end; 
+
+REPETITIVE STATEMENTS
+
+WHILE
+Exemplo:
+While (a<5) Do
+begin
+  label1.Caption := 'a';
+  a=a+1;
+end; 
+
+FOR
+for-statement = 'for' control-variable ':=' initial-value ( 'to' | 'downto' ) final-value
+'do' statement .
+control-variable = entire-variable .
+initial-value = expression .
+final-value = expression 
+Exemplo:
+For cont := 1 To 100 Do { Repete o bloco 100 vezes }
+begin
+  x := x + cont;
+  Label4.caption := str(x);
+end; 
+
+****************************************************************
+
+********************** FUNÇÕES E DESVIOS ***********************
+FUNCTION
+Exemplo:
+function <nome>(<parâmetros>):<tipo saída>
+function somar(A:integer; B:integer):integer;
+
+PROCEDURE
+procedure <nome>(<parâmetros>);
+Exemplo:
+procedure limpar(exetutar:boolean);
+
+****************************************************************
+
+*************************** OUTROS *****************************
 TECLAS DE ATALHO
 Ctl+Tecla espaço - Ativa a lista de auto completar do objeto 
                    (métodos e propriedades) - CodeTools commands
