@@ -1,0 +1,157 @@
+****************************************************************
+                   CLASSES E POO NO LAZARUS
+****************************************************************
+
+******************** ESTRUTURA DO ARQUIVO **********************
+ARQUIVO DA CLASSE .pas
+unit cPessoa; --> Nome do arquivo que contém a classe
+
+{$mode objfpc}{$H+} --> Diretiva do compilador
+
+interface --> Início da seção de interface
+
+uses
+  Classes, SysUtils; --> Blibliotecas para compilação da classe
+
+type TPessoa = class  --> Nome da Classe e tipo da super-classe
+ 
+  private     --> Atributos e métodos privados, só pode ser acessado pela classe
+    Fnome:  String;  --> Variáveis para uso interno da classe (Fields)   
+    Fidade: Integer;     Não são acessados diretamente pelo programador
+
+  protected  --> Atributos e métodos protegidos, só pode ser acessado pela classe
+                 e pelas classes filhas.
+
+  Public   --> Métodos públicos. As propriedades e métods que
+               são declaradas em public, ficam disponíveis para
+               a classe a as instâncias(objetos) 
+    constructor Create(nome: string); --> Contrutor
+    destructor Destroy; override;   --> Destructor
+    function saberIdade(qtdAnos: Integer): Integer; --> Método
+
+    property nome   :String  read Fnome   write Fnome; --> Propriedades
+    property idade  :Integer read Fidade  write Fidade;
+
+  Published --> Os métodos e probliedades declarados são iguais aos 
+                declarados em 'Public' e ficam disponíveis  no 
+                objetc inspector (no caso de criação de componentes)
+
+end;
+
+implementation  --> Início da seção de implementação
+
+constructor TPessoa.Create(nome: string);  --> Médoto construtor
+begin
+  Fnome:=nome;
+end;
+
+destructor TPessoa.Destroy; --> Método destrutor
+begin
+  inherited;
+end;
+
+function TPessoa.saberIdade(qtdAnos: Integer): Integer; --> Método
+begin
+  Result  := Fidade + qtdAnos;
+end;
+
+end.
+
+****************************************************************
+
+******************* DECLARAÇÃO E HERANÇA ***********************
+Por convenção, o nome da classe sempre vem antecedido da letra
+'T' maiúscula. A declaração da classe é feita após a cláusula
+'type'. Exemplo:
+   type 
+    TPessoa = class
+
+Nota-se que não há imformação de herança de classe, caso isso
+aconteça, por defult, essa classe herdará de 'TObject'. Caso 
+seja necessário a herança de outra classe deve-se informar a
+super classe da forma:
+   type 
+    <nome da classe filha> = class(<nome da classe pai>)
+
+É possível acessar métodos e proŕiedades da classe Pai usando
+a palavra reservada 'inherited' <nome do método>.
+
+****************************************************************
+
+****************** PROPRIEDADES E MÉTODOS *********************
+Por boas práticas de programação as variáveis internas da classe
+não devem ser acessadas por forma direta, por isso estão declaradas
+abaixo da clásula 'private'. Aquelas que devem ser acessadas pelo
+objeto são encapsuladas como propiedades pelo palavra reservada
+'property' ou são encapsuladas pelos métodos 'get' e 'set'.
+
+Exemplo de variável interna da classe:
+  private    
+    Fnome: String;     
+
+Sintaxe de declaração de propriedade:
+  property <nome da propriedade>: <tipo da propriedae> 
+    read <variável/método get>  write <variável/método set>;
+Exemplo de declaração de propriedade:
+  property nome: String read Fnome  write Fnome;
+Nota-se que a propriedade 'nome' lê e escreve na variável 
+interna 'Fnome'. A propriedade deve ser do mesmo tipo da
+variável interna. Também pode ser só de leitura (read only)
+ou leitura/escrita. 
+
+MÉTODOS ESTÁTICOS E DINÂMICOS (Polimorfismo)
+Métodos estáticos são aqueles que não podem ter seus comportamentos
+alterados pela classe filha, os métodos dinâmicos podem sofrer
+essa alteração de sobrescrita (override). Por default os métodos
+são estáticos.
+Sintaxe de declaração de métodos dinâmicos:
+ function/procedure <nome>(<atributos>):<tipo retorno>; virtual;
+Exemplo:
+ function saberIdade(qtdAnos: Integer): Integer; virtual;
+
+Para a sobreescrita pelas classes filhas é utilizada a sintaxe: 
+ function/procedure <nome>(<atributos>):<tipo retorno>; override; 
+Exemplo:
+ function saberIdade(qtdAnos: Integer): Integer; override;
+Então é criado um novo método dentro da classe filha com o mesmo
+nome onde será criado o novo código do método, assim alterando
+seu comportamento.
+
+É possível a declaração de mais de um método com o mesmo nome,
+esses se diferenciando apenas pelos seus parâmetros. Para isso
+é necessário utilizar a palavra 'overload'.
+Exemplos:
+procedure Idioma; overload;
+procedure Idioma(tipo: string); overload;
+procedure Idioma(tipo: string, nivel: integer); overload;
+
+****************************************************************
+
+******************* INSTÂCIA DE OBJETOS ************************
+O arquivo da Unit que contém a classe deve estar declarado no 
+'uses' da Unit que contém o objeto instanciado. É possível que
+tanto a declaração como a instância sejam realizadas no escopo
+local. Isso ajuda na liberação da memória quando o objeto é
+destruído.
+
+Sintaxe de declaração: var <nome do objeto>: <Tipo da classe>
+Exemplo de declaração:
+  var
+    obj: TPessoa
+	
+Sintaxe para a intâcia de objetos:
+<nome do objeto> := <nome da classe>.Create(<parâmetros do constructor>);
+É possível que em alguns casos não seja necessário a passagem de 
+parâmetros para o método construtor.
+Exemplo:
+   obj:= TPessoa.Create('Leandro');
+
+Destruição do objeto: Para que o objeto seja liberado da memória
+é utilizado a sintaxe:
+<nome do objeto>.Free;
+Exemplo:
+   obj.Free;
+
+****************************************************************
+
+****************************************************************
