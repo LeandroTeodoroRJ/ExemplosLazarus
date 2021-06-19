@@ -12,14 +12,21 @@ type
 { TNomeClasse }
 
  TNomeClasse = class(TObject)  //Com a declaração do tipo a Unit vira uma classe
-  private        // atributos e métodos privados
+  private       
+  { São aqueles que só podem ser acessados por outros
+    métodos da classe, isto é, só são visíveis dentro da classe, não podendo ser acessados nem mesmo nas
+    classes dela derivadas por herança}
     //Os Fields são internos da classe, não sendo acessíveis fora dela, assim
     //ficam no private
     Fnome   :String;
     Fidade  :Integer;
-  protected   //Métodos protegigdos
+  protected   
+  { Os campos e métodos protegidos de uma classe são aqueles que só podem ser acessados por outros
+    métodos da classe ou de classes dela derivadas – isto é, só são visíveis dentro da própria classe ou das
+    classes que forem dela derivadas por herança. }
 
-  Public      //Métodos públicos ficam diponíveis para herança
+  Public      // São aqueles que podem ser acessados em qualquer trecho
+              // de um programa no qual um objeto ou instância da classe é definido. Os métodos públicos ficam diponíveis para herança.
     constructor Create(nome: string); //Contrutor(Obrigatório)
     destructor Destroy; override;    //Destructor. A palavra override indica que
                                      //método será reescrito
