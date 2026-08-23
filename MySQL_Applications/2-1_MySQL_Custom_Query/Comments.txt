@@ -1,0 +1,3 @@
+How to connect to the MySQL Database using Lazarus and Zeos Componnent:
+
+
