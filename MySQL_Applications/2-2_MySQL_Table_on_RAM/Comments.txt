@@ -1,0 +1,25 @@
+How to connect to the MySQL Database using Lazarus and Zeos Componnent:
+
+Choose your database
+mysql> USE APPLICATION_DB;
+
+Create RAM table
+CREATE TABLE SENSORS_RAM(
+ID INT PRIMARY KEY AUTO_INCREMENT,
+DESCRIPTION VARCHAR(30),
+VALUE VARCHAR(10)
+) ENGINE = MEMORY;
+
+Insert values on table
+INSERT INTO SENSORS_RAM VALUES(NULL, 'MOTOR_SPEED', '253');
+INSERT INTO SENSORS_RAM VALUES(NULL, 'INTERNAL_PRESSURE', '157.8');
+INSERT INTO SENSORS_RAM VALUES(NULL, 'KEY_START', '1');
+
+Check values
+SELECT * FROM SENSORS_RAM;
+
+Restart the PC and check again.
+Result: The set is empty.
+
+NOTES:
+* The scape char to single quote (') is 2 times single quotes ('')
