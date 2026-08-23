@@ -1,0 +1,20 @@
+object Form1: TForm1
+  Left = 357
+  Height = 240
+  Top = 148
+  Width = 320
+  Caption = 'Form1'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  LCLVersion = '1.8.2.0'
+  object ToggleBox1: TToggleBox
+    Left = 104
+    Height = 25
+    Top = 160
+    Width = 120
+    Caption = 'Abrir Form 2'
+    OnChange = ToggleBox1Change
+    TabOrder = 0
+  end
+end

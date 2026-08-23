@@ -108,7 +108,7 @@ case combobox1.ItemIndex of
       Label2.caption := 'TESTE2' 
 end; 
 
-REPETITIVE STATEMENTS
+LOOP STATEMENTS
 
 WHILE
 Exemplo:

@@ -1,0 +1,47 @@
+object Form1: TForm1
+  Left = 349
+  Height = 240
+  Top = 148
+  Width = 320
+  Caption = 'Estruturas de Loop'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '1.8.2.0'
+  object ToggleBox1: TToggleBox
+    Left = 32
+    Height = 25
+    Top = 16
+    Width = 75
+    Caption = 'Action'
+    OnChange = ToggleBox1Change
+    TabOrder = 0
+  end
+  object Memo1: TMemo
+    Left = 144
+    Height = 192
+    Top = 16
+    Width = 150
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 1
+  end
+  object ToggleBox2: TToggleBox
+    Left = 32
+    Height = 25
+    Top = 56
+    Width = 75
+    Caption = 'Action'
+    OnChange = ToggleBox2Change
+    TabOrder = 2
+  end
+  object ToggleBox3: TToggleBox
+    Left = 32
+    Height = 25
+    Top = 96
+    Width = 75
+    Caption = 'Action'
+    OnChange = ToggleBox3Change
+    TabOrder = 3
+  end
+end

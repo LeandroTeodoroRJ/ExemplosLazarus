@@ -1,0 +1,16 @@
+How to connect to the MySQL Database using Lazarus and Zeos Componnent
+
+Sequence how to coupler componnents:
+ZConnection: Provide database connection.
+ZQuery: Execute SQL query to database.
+DataSource: Store in internal table the data from MySQL databasse
+            based on the query.
+
+The sequence is: ZConnection --> ZQuery --> DataSource -->
+                 --> Visual database componens (as DBGrid)
+
+Important:
+* Complete the red proprieties colors, It's the basic to provide
+  database connection setup.
+* Active the component proprietes as: Connected, Active and Enable.
+

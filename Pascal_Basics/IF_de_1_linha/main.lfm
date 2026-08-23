@@ -1,0 +1,28 @@
+object Form1: TForm1
+  Left = 357
+  Height = 335
+  Top = 155
+  Width = 470
+  Caption = 'Sintaxe IF'
+  ClientHeight = 335
+  ClientWidth = 470
+  LCLVersion = '1.8.2.0'
+  object ToggleBox1: TToggleBox
+    Left = 168
+    Height = 25
+    Top = 16
+    Width = 120
+    Caption = 'Exemplo 1'
+    OnChange = ToggleBox1Change
+    TabOrder = 0
+  end
+  object ToggleBox2: TToggleBox
+    Left = 168
+    Height = 25
+    Top = 56
+    Width = 120
+    Caption = 'Exemplo 2'
+    OnChange = ToggleBox2Change
+    TabOrder = 1
+  end
+end
