@@ -1,0 +1,15 @@
+How to connect to the MySQL Database using Lazarus and Zeos Componnent:
+
+How to find a specifc register on DataSet(ZQuery), locate and slipt
+your fields. With it is not necessary send a new query to SGBD,
+because the information is storage on local DataSet.
+
+ZQuery.Locate('ID', value, [])
+ * The Locate method set the database cursor on the match point.
+ * The method return True is the register was found.
+ * 'ID' is the name of field on MySQL table.
+ * value is the specific information that you want search.
+
+ZQuery.FieldByName('ID').AsString
+ * The method return the value storage on field on the DataSet(ZQuery)
+   cursor point.

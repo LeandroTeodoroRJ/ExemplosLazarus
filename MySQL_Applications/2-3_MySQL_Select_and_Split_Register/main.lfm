@@ -1,0 +1,98 @@
+object Form1: TForm1
+  Left = 411
+  Height = 411
+  Top = 194
+  Width = 554
+  Caption = 'Connect to MySQL Database'
+  ClientHeight = 411
+  ClientWidth = 554
+  LCLVersion = '4.8.0.0'
+  object DBGrid1: TDBGrid
+    Left = 80
+    Height = 168
+    Top = 208
+    Width = 424
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource
+    TabOrder = 0
+  end
+  object btnCustomQuery1: TButton
+    Left = 96
+    Height = 25
+    Top = 40
+    Width = 128
+    Caption = 'Custom Query'
+    TabOrder = 1
+    OnClick = btnCustomQuery1Click
+  end
+  object Label1: TLabel
+    Left = 96
+    Height = 16
+    Top = 88
+    Width = 42
+    Caption = 'Field 1:'
+  end
+  object Label2: TLabel
+    Left = 96
+    Height = 16
+    Top = 120
+    Width = 42
+    Caption = 'Field 2:'
+  end
+  object edDescription: TEdit
+    Left = 152
+    Height = 28
+    Top = 80
+    Width = 200
+    TabOrder = 2
+  end
+  object edValue: TEdit
+    Left = 152
+    Height = 28
+    Top = 112
+    Width = 200
+    TabOrder = 3
+  end
+  object btSelectRegister: TButton
+    Left = 248
+    Height = 25
+    Top = 40
+    Width = 75
+    Caption = 'Load'
+    TabOrder = 4
+    OnClick = btSelectRegisterClick
+  end
+  object ZConnection: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    DisableSavepoints = False
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'APPLICATION_DB'
+    User = 'admin'
+    Password = '1234'
+    Protocol = 'mysql'
+    LibraryLocation = '/usr/lib/x86_64-linux-gnu/libmysqlclient.so'
+    Left = 24
+    Top = 24
+  end
+  object ZQuery: TZQuery
+    Connection = ZConnection
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM SENSORS'
+    )
+    Params = <>
+    Left = 24
+    Top = 80
+  end
+  object DataSource: TDataSource
+    DataSet = ZQuery
+    Left = 24
+    Top = 149
+  end
+end
