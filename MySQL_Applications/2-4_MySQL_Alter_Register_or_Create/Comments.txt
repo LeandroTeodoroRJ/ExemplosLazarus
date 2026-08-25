@@ -1,0 +1,11 @@
+How to connect to the MySQL Database using Lazarus and Zeos Componnent:
+
+Alter register or create if the register not created before.
+
+ZQuery.Locate('ID', value, [])
+ * The Locate method set the database cursor on the match point.
+ * The method return True is the register was found.
+ * 'ID' is the name of field on MySQL table.
+ * value is the specific information that you want search.
+
+
